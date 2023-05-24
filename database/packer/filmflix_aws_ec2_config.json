@@ -1,0 +1,73 @@
+{
+    "variabels": {
+        "aws_access_key": "{{env `FILMFLIX_AWS_ACCESS_KEY}}",
+        "aws_secret_key": "{{env `FILMFLIX_AWS_SECRET_KEY}}",
+        "aws_region": "us-east-2",
+        "instance_type": "t4g.small",
+        "ami_name_prefix": "ubuntu22.04-t4g",
+        "provision_script": "provision.sh",
+        "playbook": "ansible/{{env `MACHINE_TYPE`}}.yml",
+        "machine_type": "{{env `MACHINE_TYPE`}}"
+    },
+    "builders": [
+        {
+            "type": "amazon-ebs",
+            "access_key": "{{user `aws_access_key`}}",
+            "secret_key": "{{user `aws_secret_key`}}",
+            "region": "{{user `aws_region`}}",
+            "source_ami_filter": {
+                "filters": {
+                    "virtualization-type": "hvm",
+                    "name": "ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-arm64-server-20230516",
+                    "root-device-type": "ebs"
+                },
+                "owners": ["099720109477"],
+                "most_recent": true
+            },
+            "instance_type": "{{user `instance_type`}}",
+            "ssh_username": "ubuntu",
+            "ami_name": "{{user `machine_type`}}-packer-{{timestamp}}",
+            "ami_description": "Ubuntu 22.04 {{user `machine_type`}} Host Image",
+            "launch_block_device_mappings": [
+                {
+                    "device_name": "/dev/sda1",
+                    "volume_size": 7,
+                    "volume_type": "gp3",
+                    "delete_on_termination": true
+                }
+            ],
+            "tags": {
+                "Name": "ff-{{user `machine_type`}}-host",
+                "role": "ff-{{user `machine_type`}}-host"
+            },
+            "run_tags": {
+                "Name": "ff-{{user `machine_type`}}-host",
+                "role": "ff-{{user `machine_type`}}-host"
+            }
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "file",
+            "source": "ansible",
+            "destination": "/var/tmp/"
+        },
+        {
+            "type": "file",
+            "source": "roles",
+            "destination": "/var/tmp/ansible/roles"
+        }, 
+        {
+            "type": "file",
+            "source": "provision.sh",
+            "destination": "/tmp/{{user `provision_script`}}"
+        }, 
+        {
+            "type": "shell",
+            "inline": [
+                "chmod u+x /tmp/{{user `provision_script`}}",
+                "/tmp/{{user `provision_script`}} {{user `playbook`}}"
+            ]
+        }
+    ]
+}
