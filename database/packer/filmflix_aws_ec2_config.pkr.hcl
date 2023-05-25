@@ -45,22 +45,21 @@ data "amazon-ami" "ubuntu22_04-t4g" {
 locals { timestamp = regex_replace(timestamp(), "[- TZ:]", "") }
 
 source "amazon-ebs" "ubuntu22_04-t4g" {
-  profile = "filmflix"
+  region = "${var.aws_region}"
   ami_description = "Ubuntu 22.04 ${var.machine_type} Host Image"
   ami_name        = "${var.machine_type}-packer-${local.timestamp}"
   instance_type   = "${var.instance_type}"
   launch_block_device_mappings {
     delete_on_termination = true
     device_name           = "/dev/sda1"
-    volume_size           = 7
+    volume_size           = 25
     volume_type           = "gp3"
   }
-  region = "${var.aws_region}"
   run_tags = {
     Name = "ff-${var.machine_type}-host"
     role = "ff-${var.machine_type}-host"
   }
-  source_ami   = "${data.amazon-ami.ubuntu.id}"
+  source_ami   = "${data.amazon-ami.ubuntu22_04-t4g.id}"
   ssh_username = "ubuntu"
   tags = {
     Name = "ff-${var.machine_type}-host"
