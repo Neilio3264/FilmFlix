@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/usr/bin/bash -e
 export playbook=$1
 
 sudo apt-get upgrade -y
