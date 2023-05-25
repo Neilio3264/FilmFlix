@@ -69,7 +69,7 @@ source "amazon-ebs" "ubuntu22_04-t4g" {
 }
 
 build {
-  sources = ["source.amazon-ebs.ubuntu"]
+  sources = ["source.amazon-ebs.ubuntu22_04-t4g"]
 
   provisioner "file" {
     destination = "/var/tmp/"
