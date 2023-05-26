@@ -32,9 +32,9 @@ variable "provision_script" {
   default = "provision.sh"
 }
 
-data "amazon-ami" "ubuntu22_04-t4g" {
+data "amazon-ami" "ubuntu20_04-t4g" {
   filters = {
-    name                = "ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-arm64-server-20230516"
+    name                = "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-arm64-server-20230517"
     root-device-type    = "ebs"
     virtualization-type = "hvm"
   }
@@ -44,22 +44,22 @@ data "amazon-ami" "ubuntu22_04-t4g" {
 
 locals { timestamp = regex_replace(timestamp(), "[- TZ:]", "") }
 
-source "amazon-ebs" "ubuntu22_04-t4g" {
+source "amazon-ebs" "ubuntu20_04-t4g" {
   region = "${var.aws_region}"
-  ami_description = "Ubuntu 22.04 ${var.machine_type} Host Image"
+  ami_description = "Ubuntu 20.04 ${var.machine_type} Host Image"
   ami_name        = "${var.machine_type}-packer-${local.timestamp}"
   instance_type   = "${var.instance_type}"
   launch_block_device_mappings {
     delete_on_termination = true
     device_name           = "/dev/sda1"
-    volume_size           = 25
+    volume_size           = 30
     volume_type           = "gp3"
   }
   run_tags = {
     Name = "ff-${var.machine_type}-host"
     role = "ff-${var.machine_type}-host"
   }
-  source_ami   = "${data.amazon-ami.ubuntu22_04-t4g.id}"
+  source_ami   = "${data.amazon-ami.ubuntu20_04-t4g.id}"
   ssh_username = "ubuntu"
   tags = {
     Name = "ff-${var.machine_type}-host"
@@ -68,7 +68,7 @@ source "amazon-ebs" "ubuntu22_04-t4g" {
 }
 
 build {
-  sources = ["source.amazon-ebs.ubuntu22_04-t4g"]
+  sources = ["source.amazon-ebs.ubuntu20_04-t4g"]
 
   provisioner "file" {
     destination = "/var/tmp/"
