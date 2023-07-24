@@ -4,9 +4,10 @@
 <!-- [![Forks][forks-shield]][forks-url] -->
 <!-- [![Stargazers][stars-shield]][stars-url] -->
 <!-- [![Issues][issues-shield]][issues-url] -->
+
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-
+[![Github][Neilio3264]][Github-url]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -26,7 +27,6 @@
     <a href="">View Demo</a>
   </p>
 </div>
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -54,8 +54,8 @@
   </ol>
 </details>
 
-
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
@@ -65,33 +65,64 @@ I recently read a book on distributed computing, a field that I believe is often
 Through the FilmFlix project, I will develop a cinema application with each functionality built out as a microservice. These will include the front-facing UI, a cinema catalog service, payment service, ticket booking service, and notification service.
 
 Through this microservice technique, I will practice the many benefits of distributed computing:
-* Optimizing application start time
-* Running independent services allowing for easier version control and updates
-* Building an application that is easily scalable
-* Eliminating the need to rely on a single technology stack that is continuously improving
-* Practicing better code organization allowing higher quality documentation
 
+- Optimizing application start time
+- Running independent services allowing for easier version control and updates
+- Building an application that is easily scalable
+- Eliminating the need to rely on a single technology stack that is continuously improving
+- Practicing better code organization allowing higher quality documentation
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-<!-- 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+#### Frontend Frameworks
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+- [![Figma][Figma]][Figma-url]
+- [![Next][Next.js]][Next-url]
+- [![React][React.js]][React-url]
+- [![MUI][MUI]][MUI-url]
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
+#### Backend Frameworks
 
+- [![Postman][Postman]][Postman-url]
+- [![Firebase][Firebase]][Firebase-url]
 
+#### Database
+
+- [![MongoDB][MongoDB]][MongoDB-url]
+- [![Docker][Docker]][Docker-url]
+
+#### Cloud Resources
+
+- [![AWS][AWS]][AWS-url]
+- [![Terraform][Terraform]][Terraform-url]
+- [![Ansible][Ansible]][Ansible-url]
+- [![Shell Script][Shell Script]][Shell Script-url]
+
+#### Additional Integrations
+
+- [![Stripe][Stripe]][Stripe-url]
+
+#### Languages
+
+- [![C++][C++]][C++-url]
+- [![Javascript][Javascript]][Javascript-url]
+- [![TypeScript][TypeScript]][TypeScript-url]
+- [![Html][Html]][Html-url]
+- [![CSS][CSS]][CSS-url]
+- [![Json][Json]][Json-url]
+
+#### Linters
+
+- [![ESLint][ESLint]][ESLint-url]
+- [![Prettier][Prettier]][Prettier-url]
+
+#### IDE
+
+- [![VSCode][VSCode]][VSCode-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 <!-- ## Getting Started
@@ -127,8 +158,6 @@ _Below is an example of how you can instruct your audience on installing and set
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
-
-
 <!-- USAGE EXAMPLES -->
 <!-- ## Usage
 
@@ -138,24 +167,19 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
-
-
 <!-- ROADMAP -->
-<!-- ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+## Roadmap
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+- [ ] Setup AWS Cloud Resources
+  - [x] Create AWS AMI with needed resources for EC2 Instances
+  - [ ] Create AWS VPC to setup Mongo DB Replica Set
+  - [ ] Create Docker Swarm with each EC2 Instance Running Docker
+- [ ] Mimic Cloud Docker Swarm with a local instance
+- [ ] Begin Work on REST API
+  - [ ] Create Cinema Catalog and Movie API
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
-
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 <!-- ## Contributing
@@ -173,27 +197,23 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
-
-
 <!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- CONTACT -->
+
 ## Contact
 
-Neil Rathod - [@rathodneil11](https://instagram.com/rathodneil11) - neilrathod12@gmail.com
+[![Instagram][@neilrathod11]][Instagram-url] [![Gmail][neilrathod12]][Gmail-url]
 
 Project Link: [https://github.com/Neilio3264/FilmFlix](https://github.com/Neilio3264/FilmFlix)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- ACKNOWLEDGMENTS -->
 <!-- ## Acknowledgments
@@ -211,8 +231,6 @@ Use this space to list resources you find helpful and would like to give credit 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p> --> -->
 
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 <!-- [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge -->
@@ -223,17 +241,88 @@ Use this space to list resources you find helpful and would like to give credit 
 <!-- [stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers -->
 <!-- [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge -->
 <!-- [issues-url]: https://github.com/othneildrew/Best-README-Template/issues -->
+
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
 [license-url]: https://github.com/Neilio3264/FilmFlix/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/neilrathod
+[Neilio3264]: https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white
+[GitHub-url]: https://github.com/Neilio3264
+[@neilrathod11]: https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white
+[Instagram-url]: https://instagram.com/neilrathod11
+[neilrathod12]: https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white
+[Gmail-url]: mailto:neilrathod12@gmail.com
+
 <!-- [product-screenshot]: images/screenshot.png -->
-<!-- [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/ -->
+
+<!-- Frontend -->
+
+[Figma]: https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white
+[Figma-url]: https://www.figma.com/
+[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
-<!-- [Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/ -->
+[MUI]: https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white
+[MUI-url]: https://mui.com/
+
+<!-- Backend -->
+
+[Postman]: https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white
+[Postman-url]: https://www.postman.com/
+[Firebase]: https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black
+[Firebase-url]: https://firebase.google.com/
+
+<!-- Database -->
+
+[MongoDB]: https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white
+[MongoDB-url]: https://www.mongodb.com/
+[Docker]: https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white
+[Docker-url]: https://www.docker.com/
+
+<!-- Cloud -->
+
+[AWS]: https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white
+[AWS-url]: https://aws.amazon.com/
+[Ansible]: https://img.shields.io/badge/Ansible-000000?style=for-the-badge&logo=ansible&logoColor=white
+[Ansible-url]: https://www.ansible.com/
+[Terraform]: https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white
+[Terraform-url]: https://www.terraform.io/
+[Shell Script]: https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white
+[Shell Script-url]: https://www.gnu.org/software/bash/
+
+<!-- Languages -->
+
+[C++]: https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white
+[C++-url]: https://gcc.gnu.org/
+[TypeScript]: https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white
+[TypeScript-url]: https://www.typescriptlang.org/
+[Json]: https://img.shields.io/badge/json-5E5C5C?style=for-the-badge&logo=json&logoColor=white
+[Json-url]: https://www.json.org/json-en.html
+[Javascript]: https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E
+[Javascript-url]: https://www.javascript.com/
+[Html]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
+[Html-url]: https://html.spec.whatwg.org/
+[CSS]: https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
+[CSS-url]: https://www.w3.org/TR/CSS/#css
+
+<!-- Linters -->
+
+[ESLint]: https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white
+[ESLint-url]: https://eslint.org/
+[Prettier]: https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E
+[Prettier-url]: https://prettier.io/
+
+<!-- Additional Integrations -->
+
+[Stripe]: https://img.shields.io/badge/Stripe-626CD9?style=for-the-badge&logo=Stripe&logoColor=white
+[Stripe-url]: https://stripe.com/
+
+<!-- IDE -->
+
+[VSCode]: https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white
+[VSCode-url]: https://code.visualstudio.com/
+
 <!-- [Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
 [Angular-url]: https://angular.io/ -->
 <!-- [Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
